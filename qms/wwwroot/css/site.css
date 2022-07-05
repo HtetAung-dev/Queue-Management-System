@@ -14,5 +14,75 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin:0;
+  padding: 0;
 }
+
+
+/* home css */
+.row{
+  padding: 10px;
+}
+.card-item{
+  padding: 10px;
+  margin: 20px;
+  height: 190px;
+  width: 280px;
+  box-shadow: 10px 10px rgb(188, 223, 235);
+}
+
+.card-text{
+  font-size: 50px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.row .card .card-title{
+  font-size: 30px;
+  font-weight: bolder;
+}
+.queue-container{
+  margin-top: 70px;
+  padding: 50px;
+  background-color: rgb(196, 195, 194);
+  border: 1px solid #616060;
+}
+.queue-container h2{
+  font-size: 80px;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+.queue-container h4{
+  font-size: 40px;
+  font-weight: bold;
+  
+}
+
+/* Entry Form */
+
+.form-container{
+  margin-top: 70px;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #616060;
+  border-radius: 10px;
+  box-shadow: 5px 3px 3px #c2bebe;
+}
+
+.form-container .form-content{
+  margin-top: 20px;
+  margin-left: 65px;
+  
+}
+
+.form-content .btn{
+  margin-left: 80px;
+}
+
+.form-container .form-group{
+  margin-top: 10px;
+}
+
+
+

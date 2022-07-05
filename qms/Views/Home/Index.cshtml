@@ -1,8 +1,52 @@
-﻿@{
+﻿@using qms.common;
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid card-container">
+    <div class="row">
+
+        <div class="col card-item card">
+            <div class="card-body">
+                <h5 class="card-title text-center">@commondata.ConstantName["counter1"]</h5>
+                <p class="card-text text-center text-primary">-1--</p>
+            </div>
+        </div>
+
+        <div class="col card-item card">
+            <div class="card-body">
+                <h5 class="card-title text-center">@commondata.ConstantName["counter2"]</h5>
+                <p class="card-text text-center text-primary">----</p>
+            </div>
+        </div>
+
+        <div class="col card-item card">
+            <div class="card-body">
+                <h5 class="card-title text-center">@commondata.ConstantName["counter3"]</h5>
+                <p class="card-text text-center text-primary">----</p>
+            </div>
+        </div>
+
+        <div class="col card-item card">
+            <div class="card-body">
+                <h5 class="card-title text-center">@commondata.ConstantName["counter4"]</h5>
+                <p class="card-text text-center text-primary">----</p>
+            </div>
+        </div>
+
+        <div class="col card-item card">
+            <div class="card-body">
+                <h5 class="card-title text-center">@commondata.ConstantName["counter5"]</h5>
+                <p class="card-text text-center text-primary">----</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container queue-container">
+    <div class="align-items-center">
+        <h4 class="text-center">@commondata.ConstantName["nextToken"]</h4>
+        <h2 class="text-center text-danger">0021</h2>
+    </div>
+</div>
 </div>
