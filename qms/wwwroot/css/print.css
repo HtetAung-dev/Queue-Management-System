@@ -1,0 +1,76 @@
+.print-container{
+    width: 700px;
+    height: 400px;
+    border: 2px solid #000000;
+    position: relative;
+    box-shadow: 4px 6px #6e6c6c;
+}
+
+.print-container .row .col h2{
+    /* padding: 10px 0px 0px 2px; */
+    text-align: center;
+    font-weight: bolder;
+}
+
+.text-block{
+    padding: 0;
+    margin: 0;
+}
+
+.text-block .details .token-label{
+    display: block;
+    width: 140px;
+}
+.text-group{
+    margin-top: 55px ;
+}
+
+
+.queue-text h1{
+    display: block;
+    border: 1px solid #000000;
+    font-weight: bolder;
+    font-size: 90px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.print-btn{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(0, 149, 207);
+    box-shadow: 1px 2px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn{
+    margin-top: 30px;
+}
+
+#print-btn:hover{
+    box-shadow: 2px 2px;
+    background-color: rgb(24, 180, 241);
+}
+
+@media print{
+    #print-container{
+        width: 700px;
+        max-width: 700px;
+        height: 400px;
+        border:none;
+        box-shadow: none;
+    }
+
+    header{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .btn{
+        display: none;
+    }
+}

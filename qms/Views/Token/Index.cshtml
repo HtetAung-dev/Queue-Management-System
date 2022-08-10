@@ -1,25 +1,27 @@
 @using qms.common
+@model qms.Models.Token
+
 @{
     ViewData["title"] = "Token Page";
 }
 
 <div class="container align-items-center form-container">
     <h2 class="form-title" style="text-align:center;">Customer Details</h2>
-    <form class="form-content">
+    <form class="form-content" asp-action="Create">
         <div class="form-group">
-            <label for="vehicleNo" class="form-label">@commondata.ConstantName["VehicleNo"]</label>
-            <input type="text" class="form-control" id="vehicleNo" style="width: 250px;"
+            <label asp-for="PlateNo" class="form-label">@commondata.ConstantName["VehicleNo"]</label>
+            <input asp-for="PlateNo" class="form-control" style="width: 250px;"
                 placeholder="Enter Vehicle No">
         </div>
         <div class="form-group">
-            <label for="ownerName" class="form-label">@commondata.ConstantName["VehicleOwner"]</label>
-            <input type="text" class="form-control" style="width: 250px;" id="ownerName" placeholder="Enter Owner Name">
+            <label asp-for="Customer" class="form-label">@commondata.ConstantName["VehicleOwner"]</label>
+            <input asp-for="Customer" class="form-control" style="width: 250px;" placeholder="Enter Owner Name">
         </div>
         <div class="form-group">
-            <label for="contactNo" class="form-label">@commondata.ConstantName["ContactNo"]</label>
-            <input type="text" class="form-control" style="width: 250px;" id="contactNo" placeholder="Enter Owner Name">
+            <label asp-for="ContactNo" class="form-label">@commondata.ConstantName["ContactNo"]</label>
+            <input asp-for="ContactNo" class="form-control" style="width: 250px;" placeholder="Enter Owner Name">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>

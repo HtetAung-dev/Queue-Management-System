@@ -1,0 +1,19 @@
+@using qms.common
+@model qms.Models.Token
+
+
+@{
+    ViewData["title"] = "Token Page";
+}
+
+<div class="container counter-container align-items-center">
+    <form asp-action="ChangeToken1">
+        <div class="token-header">
+            <h2>@Html.DisplayFor(m => m.Ticket)</h2>
+        </div>
+        <button type="submit" class="change-btn btn btn-primary align-items-center">Next Token</button>
+    </form>
+
+
+    
+</div>

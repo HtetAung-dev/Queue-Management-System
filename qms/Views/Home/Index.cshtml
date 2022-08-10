@@ -1,6 +1,7 @@
 ﻿@using qms.common;
 @{
     ViewData["Title"] = "Home Page";
+    var tickets = (Dictionary<int, String>)ViewData["tickets"];
 }
 
 <div class="container-fluid card-container">
@@ -9,35 +10,35 @@
         <div class="col card-item card">
             <div class="card-body">
                 <h5 class="card-title text-center">@commondata.ConstantName["counter1"]</h5>
-                <p class="card-text text-center text-primary">-1--</p>
+                <p class="card-text text-center text-primary">@tickets[1]</p>
             </div>
         </div>
 
         <div class="col card-item card">
             <div class="card-body">
                 <h5 class="card-title text-center">@commondata.ConstantName["counter2"]</h5>
-                <p class="card-text text-center text-primary">----</p>
+                <p class="card-text text-center text-primary">@tickets[2]</p>
             </div>
         </div>
 
         <div class="col card-item card">
             <div class="card-body">
                 <h5 class="card-title text-center">@commondata.ConstantName["counter3"]</h5>
-                <p class="card-text text-center text-primary">----</p>
+                <p class="card-text text-center text-primary">@tickets[3]</p>
             </div>
         </div>
 
         <div class="col card-item card">
             <div class="card-body">
                 <h5 class="card-title text-center">@commondata.ConstantName["counter4"]</h5>
-                <p class="card-text text-center text-primary">----</p>
+                <p class="card-text text-center text-primary">@tickets[4]</p>
             </div>
         </div>
 
         <div class="col card-item card">
             <div class="card-body">
                 <h5 class="card-title text-center">@commondata.ConstantName["counter5"]</h5>
-                <p class="card-text text-center text-primary">----</p>
+                <p class="card-text text-center text-primary">@tickets[5]</p>
             </div>
         </div>
 
@@ -46,7 +47,19 @@
 <div class="container queue-container">
     <div class="align-items-center">
         <h4 class="text-center">@commondata.ConstantName["nextToken"]</h4>
-        <h2 class="text-center text-danger">0021</h2>
+        <h2 class="text-center text-danger">@tickets[0]</h2>
     </div>
 </div>
 </div>
+@section Scripts {
+<script type="text/javascript">
+    $(document).ready(function() {
+        var idleInterval = setInterval("reloadpage()", 5000); //5 seconds
+    })
+    function reloadpage() {
+       location.reload();
+    }
+
+</script>
+
+};

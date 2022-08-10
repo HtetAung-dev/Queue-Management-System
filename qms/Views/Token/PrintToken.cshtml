@@ -1,0 +1,67 @@
+@using qms.common
+@model qms.Models.Token
+@{
+    ViewData["title"] = "Token Page";
+}
+
+<div class="print-container container align-items-center" id="print-container">
+    <div class="row">
+        <div class="col">
+            <h2>@commondata.ConstantName["MCDC"]</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" text-group col md-8">
+            <div class="text-block row">
+                <div class="details col-md-6">
+                    <p class="token-label"><strong>@commondata.ConstantName["VehicleNo"]</strong></p>
+                </div>
+                <div class="details col-md-6">
+                    <p class="token-value">- @Html.DisplayFor(model => model.PlateNo)</p>
+                </div>
+            </div>
+            <div class="text-block row">
+                <div class="details col-md-6">
+                    <p class="token-label"><strong>@commondata.ConstantName["VehicleOwner"]</strong></p>
+                </div>
+                <div class="details col-md-6">
+                    <p class="token-value">- @Html.DisplayFor(model => model.Customer)</p>
+                </div>
+            </div>
+            <div class="text-block row">
+                <div class="details col-md-6">
+                    <p class="token-label"><strong>@commondata.ConstantName["ContactNo"]</strong></p>
+                </div>
+                <div class="details col-md-6">
+                    <p class="token-value">- @Html.DisplayFor(model => model.ContactNo)</p>
+                </div>
+            </div>
+            <div class="text-block row">
+                <div class="details col-md-6">
+                    <p class="token-label"><strong>@commondata.ConstantName["CreatedDate"]</strong></p>
+                </div>
+                <div class="details col-md-6">
+                    <p class="token-value">- @Html.DisplayFor(model => model.CreatedAt)</p>
+                </div>
+            </div>
+        </div>
+        <div class="queue-text col md-6">
+            <h1>@Html.DisplayFor(model => model.Ticket)</h1>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid btn">
+    <button onclick="printToken()" value="Print" id="print-btn" class="print-btn">Print</button>
+</div>
+
+@section Scripts {
+<script type="text/javascript">
+    function printToken() {
+        window.print();
+        window.location.href = "/Token/Create";
+    }
+
+</script>
+
+};

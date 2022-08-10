@@ -84,5 +84,29 @@ body {
   margin-top: 10px;
 }
 
+/* counters */
 
+.counter-container{
+  width: 500px;
+  height: 500px;
+  border: 2px solid #1d1c1c;
+  box-shadow: 3px 3px #616060;
+  border-radius: 18px;
+}
+
+.counter-container .token-header{
+  margin-top: 150px;
+}
+
+.counter-container .token-header h2{
+  text-align: center;
+  font-size: 78px;
+  font-weight: bolder;
+  border: 1px solid #000000;
+}
+
+.counter-container .change-btn{
+  margin-left: 180px;
+  margin-top: 100px;
+}
 

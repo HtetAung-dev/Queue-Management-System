@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hk+tvch2VkBBtbigEtFuwrV7NzeYFQJRBv8T4/1zMLQ=",
+  "Hash": "6SOsGtc5XfDMli0I9qVNnjm0XFizOx5YRxYf2PnMX9k=",
   "Source": "qms",
   "BasePath": "_content/qms",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Data\\CoreApp\\Queue-Management-System\\qms\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\qms.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Data\\CoreApp\\Queue-Management-System\\qms\\wwwroot\\css\\print.css",
+      "SourceId": "qms",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Data\\CoreApp\\Queue-Management-System\\qms\\wwwroot\\",
+      "BasePath": "_content/qms",
+      "RelativePath": "css/print.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\print.css"
     },
     {
       "Identity": "C:\\Data\\CoreApp\\Queue-Management-System\\qms\\wwwroot\\css\\site.css",

@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using qms.Models;
+using qms.DataAccess;
 
 namespace qms.Controllers;
 
@@ -15,6 +16,36 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Token counters = new Token();
+        TokenSqlMgr tokenSqlMgr = new TokenSqlMgr();
+        Token nextToken = new Token();
+
+        nextToken = tokenSqlMgr.GetFirstToken();
+    
+        Dictionary<int, String> tickets = new Dictionary<int, String>();
+        for(int i = 1; i < 6; i++)
+        {
+            counters = tokenSqlMgr.GetCounterToken(i);
+            if(counters.Qid > 0)
+            {
+                tickets.Add(i, counters.Ticket);
+            }
+            else
+            {
+                tickets.Add(i, "----");
+            }
+        }
+
+        if(nextToken.Qid > 0)
+        {
+            tickets.Add(0, nextToken.Ticket);
+        }else
+        {
+            tickets.Add(0, "----");
+        }
+        
+
+        ViewData["tickets"] = tickets;
         return View();
     }
 
